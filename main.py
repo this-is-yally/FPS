@@ -69,7 +69,7 @@ async def process_name(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
         data['name'] = message.text
 
-        headers = {"TRN-Api-Key": "480a5101-7655-4f73-8379-997b81e31c92"}
+        headers = {"TRN-Api-Key": "api-key"}
         urll = 'https://api.fortnitetracker.com/v1/profile/all/'
         url = urll + data['name']
         r = requests.get(url, headers=headers)
